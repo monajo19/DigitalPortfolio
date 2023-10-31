@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>name</title>
+<style>
+body
+{
+font-family:Arial,sans-serif:
+margin:0;
+padding:0;
+backgroung-color:#f0f0f0;
+}
+header
+{
+background-color:#333;
+color:#fff;
+text-align:center;
+padding:2rem 0;
+position:relative;/*Add this*/
+}
+.header-content h1
+{
+font-size:2.5rem;
+}
+/*Add Syles for the round profile picture*/
+.profile-picture
+{
+width:100px;
+/*Adjust the size as needed*/
+height=100px;
+border-radius:75%;
+/*Create a circular shape*/
+object-fit:cover;
+/*To Ensure image fills the circular area*/
+position:absolute;
+/*Add this*/
+top:0px;
+/*Adjust  top position as needed*/
+left:100px;
+/*Adjust left position as needed*/
+}
+nav
+{
+background-color:#333;
+color:#fff;
+text-align:center;
+}
+nav ul {
+list-style-type:none;
+pdding:0px;
+}
+nav ul li {
+display:inline;
+margin:0 20px;
+}
+nav ul li a {
+text-decoration:none;
+color:#fff;
+}
+.section-content {
+background-color:#fff;
+padding:2rem;
+margin:1rem;
+border-radius:20px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+.download-button{
+background-color:#333;
+color:#fff;
+padding:0.5rem 1rem;
+text-decoration:none;
+border-radius:20px;
+margin-top:10px;
+}
+.download-button:hover {
+background-color:blue;
+}
+footer {
+text-align:center;
+padding:1rem 0;
+background color:#333;
+color:#fff;
+}
+ul {
+list-style-type:square;
+padding-left:20px;
+}
+</style>
+</head>
+<body>
+<header>
+<div class="header.content">
+<!--Add your Profile picture here-->
+<img src="mona.jpg"alt="Your profile picture"class="profile-picture">
+<h1>Mohana Priya V</h1>
+<p>passionate on learning</p>
+</div>
+</header> 
+<nav>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#resume">Resume</a></li>
+</ul>
+</nav>
+<section id="about">
+<div class="section-content">
+<h2>About me</h2>
+<p>Hello,I am Mohana Priya studing III-BCA in Thanthai Periyar (Autonomous)College.
+</p>
+</div>
+</section>
+<section id="Education">
+<div class="section-content">
+<h2>Education</h2>
+<p>I'm Completed Bachelor of Computer Applications in Thanthai Periyar Government Arts&Science college,Trichy.
+</p>
+</div>
+</section>
+<section id="skills">
+<div class="section-content">
+<h2>Skills</h2>
+<ul>
+<li>SQL</li>
+<li>C Programming</li>
+<li>Java</li>
+<li>HTML</li>
+</ul>
+</div>
+</section>
+<section id="projects">
+<div class="section-content">
+<h2>Projects</h2>
+<ul>
+<li><a href ="prj.jpg">Project 1</a></li>
+<li><a href="#">Project 2</a></li>
+<!--Add more Projects links here-->
+</div>
+</section>
+<section id="resume">
+<center>
+<div class="section-content">
+<h2>Resume</h2>
+<a href="res.jpg"class=download-button onclick">Download CV</a></button>
+</div>
+</center>
+</section>
+<footer>
+<p>&copy;2023 JothikaVenkatesh</p>
+</footer>
+<script>
+//smooth scrolling to section when clickingan navigation links
+document.queryselectorAll('a[href^="#"]').forEach(anchor=>
+{
+anchor.addEventListener('click',function(e) {
+e.preventDefault();
+
+const targetId=this.getAttribute('href').substring(1);
+const targetElement=document.getelementById(targetId);
+
+if(targetElement) {
+window.srollTo({
+top:targetElement.offsetTop,behavior:'smooth'
+});
+}
+});
+});
+</script>
+</body>
+</html> 
+
+
